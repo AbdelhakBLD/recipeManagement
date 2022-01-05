@@ -6,8 +6,6 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 
 @Data
 public class IngredientQuantity {
-    @Id
-    private String id;
 
     private float quantity;
     @DBRef
