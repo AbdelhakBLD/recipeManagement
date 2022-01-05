@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class Recipe {
     private String name;
     private String description;
     private String author;
-    @DBRef
-    private List<Ingredient> ingredientList = new ArrayList<>();
+
+    private List<IngredientQuantity> ingredientQuantities = new ArrayList<>();
     private List<Step> stepList = new ArrayList<>();
 }
